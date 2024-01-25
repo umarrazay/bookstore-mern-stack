@@ -1,0 +1,21 @@
+/* Navbar Styles */
+*{
+    margin: 0;
+}
+.navbar {
+    background-color: #1365a8;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
