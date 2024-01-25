@@ -1,0 +1,19 @@
+{
+  "name": "bookstore-mern-stack-web3",
+  "version": "1.0.0",
+  "description": "BookStore for buy and sell books online with additional crypto payment support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umarrazay/bookstore-mern-stack.git"
+  },
+  "author": "umar raza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umarrazay/bookstore-mern-stack/issues"
+  },
+  "homepage": "https://github.com/umarrazay/bookstore-mern-stack#readme"
+}
