@@ -1,0 +1,31 @@
+.header-canvas {
+    background-image: url('https://ik.imagekit.io/lk8j42zbn6/library-reading-room-interior-flat-orthogonal-composition-with-young-lady-customer-table-bookshelves_1284-27315.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 45vh;
+    
+}
+.header-content {
+    max-width: 600px;
+    margin: auto;
+    padding-top: 6%;    
+}
+.header-content p{
+    font-size: 20px;
+}
+
+.header-content a{
+    background-color: #F8F9FA;
+    border-color:#fff;
+    color:#FF5757;
+    font-weight: 500;
+}
+.header-content a:hover{
+    background-color: #FF5757;
+    border-color:#FF5757;
+
+    color:#ffffff;
+    font-weight: 500;
+}

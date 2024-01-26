@@ -33,10 +33,10 @@ const getSingleHistoryBookRecord = async (req, res) => {
 
 const createHistoryBookRecord = async (req, res) => {
 
-    const { title, description, author, publishedDate, stock, imageUrl, category } = req.body;
+    const { title, description, author, publishedDate, stock, imageUrl, price,  category } = req.body;
 
     try {
-        const createhistorybookrecord = await HistoryBook.create({ title, description, author, publishedDate, stock, imageUrl, category })
+        const createhistorybookrecord = await HistoryBook.create({ title, description, author, publishedDate, stock, imageUrl, price ,category })
         res.status(200).json(createhistorybookrecord)
     } catch (error) {
         res.status(400).json({ error: error.message })

@@ -39,6 +39,11 @@ const hisbookSchema = new mongoose.Schema({
       message: 'Invalid URL format'
     }
   },
+  price: {
+    type: Number,
+    required: true,
+    min: 0
+  },
   category: {
     type: String,
     required: true,

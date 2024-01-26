@@ -2,16 +2,21 @@ import "./History.css"
 
 export default function History({ hisdetails }) {
     return (
-        <div className="hisItems">
-            <div className="card">
-                <img src={hisdetails.imageUrl} alt={`${hisdetails.title}  Image`} style={{width:"100%"}} />
-                    <h3>{hisdetails.title}</h3>
-                    <p className="price">$19.99</p>
-                    <p>{hisdetails.description}</p>
-                    <p>{hisdetails.stock}</p>
-                    <p>{hisdetails.author}</p>
-                    <p><button>Add to Cart</button></p>
-            </div>
-        </div>
+        <>
+            {
+                <div className="card" style={{ width: '100%', marginBottom: '20px' }}>
+                    <img src={hisdetails.imageUrl} className="card-img-top" alt={`${hisdetails.title}  Image`} />
+                    <div className="card-body">
+                        <h5 className="card-title">{hisdetails.title}</h5>
+                        <p className="card-text">
+                            {hisdetails.description}
+                        </p>
+                        <a href="#" className="btn btn-default"> Add to Cart </a>
+                    </div>
+                </div>
+            }
+        </>
+
+
     )
 }

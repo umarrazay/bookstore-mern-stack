@@ -1,14 +1,13 @@
-.historybooks{
-    background-color: rgb(224, 222, 222);
-    height: 100vh;
+.historyPageHeader{
+    background-color: #FF5757;
+    padding: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 80px;
 }
-
-.historybooks h1{
+.historyPageHeader h1{
+    color: #fff;
     text-align: center;
-    letter-spacing: 10px;
-    position: relative;
-    top:20px;
-}
-.product-card{
-    width: 20%;
+    letter-spacing: 1px;
 }

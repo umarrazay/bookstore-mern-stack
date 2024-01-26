@@ -33,10 +33,10 @@ const getSingleProgrammingBookRecord = async (req, res) => {
 
 const createProgrammingBookRecord = async (req, res) => {
 
-    const { title, description, author, publishedDate, stock, imageUrl, category } = req.body;
+    const { title, description, author, publishedDate, stock, imageUrl, price ,category } = req.body;
 
     try {
-        const createProgBookRecord = await ProgrammingBook.create({ title, description, author, publishedDate, stock, imageUrl, category })
+        const createProgBookRecord = await ProgrammingBook.create({ title, description, author, publishedDate, stock, imageUrl, price ,category })
         res.status(200).json(createProgBookRecord)
     } catch (error) {
         res.status(400).json({ error: error.message })
