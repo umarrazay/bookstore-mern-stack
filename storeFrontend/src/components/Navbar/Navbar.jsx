@@ -7,7 +7,7 @@ import websiteLogo from "../../assets/images/BookPolisLogo.png";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div className="container">
         {/* Logo */}
         <Link to="/" className="navbar-brand">

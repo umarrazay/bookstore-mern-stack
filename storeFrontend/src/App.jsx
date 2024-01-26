@@ -9,6 +9,7 @@ import HomePage from './pages/Home/HomePage'
 import Contact from './pages/Contact/Contact';
 import HistoryBook from './pages/HistoryBooks/HistoryBook'
 import ProgrammingBooks from './pages/ProgrammingBooks/ProgrammingBooks'
+import AddBooks from './pages/Admin/AddBooksData/AddBooks';
 
 
 
@@ -29,6 +30,7 @@ function App() {
                     <Route path="programmingbooks" element={<ProgrammingBooks/>} />
                     <Route path="about" element={<About/>} />
                     <Route path="contact" element={<Contact/>} />
+                    <Route path="Admin/AddBooks" element={<AddBooks/>} />
                   </Routes>
               </div>
           </BrowserRouter>

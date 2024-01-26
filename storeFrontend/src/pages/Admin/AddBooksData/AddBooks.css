@@ -1,0 +1,15 @@
+.addbookform{
+    background-color: #F8F9FA;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.addbookform label{
+    color:#333;
+    font-weight: bolder;
+}
+.addbookform button{
+    background-color: #FF5757;
+    color:#fff;
+    border-color: #FF5757;
+}
