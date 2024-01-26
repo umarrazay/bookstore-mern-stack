@@ -8,9 +8,7 @@ export default function History({ hisdetails }) {
                     <img src={hisdetails.imageUrl} className="card-img-top" alt={`${hisdetails.title}  Image`} />
                     <div className="card-body">
                         <h5 className="card-title">{hisdetails.title}</h5>
-                        <p className="card-text">
-                            {hisdetails.description}
-                        </p>
+                        <p>{hisdetails.price} PKR </p>
                         <a href="#" className="btn btn-default"> Add to Cart </a>
                     </div>
                 </div>

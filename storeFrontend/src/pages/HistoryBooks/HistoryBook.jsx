@@ -1,37 +1,37 @@
 import { useState, useEffect } from "react"
 import "./HistoryBook.css"
 import History from "../../components/history/History"
+import axios from "axios"
+
 
 export default function HistoryBook() {
 
-  const [historyBookDetails, sethistoryBookDetails] = useState(null)
+  const [HistoryBooksData, setHistoryBookData] = useState(null)
+  const [HasError, setHasError] = useState("");
 
-  useEffect(() => {
-
-    const fetchHistoryBookDetails = async () => {
-      const response = await fetch('http://localhost:5000/api/historybooks/getBookRecords')
-      const json = await response.json()
-
-      if (response.ok) {
-        sethistoryBookDetails(json)
-      }
-
+  const getMyHistoryData = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/historybooks/getBookRecords");
+      setHistoryBookData(res.data);
+    } catch (error) {
+      setHasError(error.message);
     }
+  };
 
-    fetchHistoryBookDetails()
-
-  }, [])
-
+  useEffect(()=>{
+    getMyHistoryData();
+  } , []);
 
   return (
     <>
       <div className='container historyPageHeader'>
         <h1>History Books</h1>
+        {HasError !== "" && <h2>{HasError}</h2>}
       </div>
       <div className="container">
         <div className="row">
           {
-            historyBookDetails && historyBookDetails.map((hisdetails) => (
+            HistoryBooksData && HistoryBooksData.map((hisdetails) => (
               <div key={hisdetails._id} className="col-sm-3" >
                 <History hisdetails={hisdetails} />
               </div>
