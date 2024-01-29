@@ -2,11 +2,9 @@ const express  = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
-
 const { SERVER_PORT, MONGO_DB_URI } = require("./config.js")
-const historybooksRoute = require('./routes/HistoryBookRoutes')
-const programmingBookRoute = require('./routes/ProgrammingBookRoutes')
 
+const Mainroutes = require("./routes/MainRoutes.js")
 
 // middleware 
 
@@ -17,11 +15,9 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
-  
-// Api Routes
 
-app.use('/api/historybooks' , historybooksRoute )
-app.use('/api/programmingbooks' , programmingBookRoute )
+app.use(Mainroutes)
+  
 
 // DB Connection
 

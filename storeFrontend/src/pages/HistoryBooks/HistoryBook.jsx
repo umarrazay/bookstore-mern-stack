@@ -6,12 +6,12 @@ import axios from "axios"
 
 export default function HistoryBook() {
 
-  const [HistoryBooksData, setHistoryBookData] = useState(null)
+  const [BooksData, setHistoryBookData] = useState(null)
   const [HasError, setHasError] = useState("");
 
-  const getMyHistoryData = async () => {
+  const getMyBooksData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/historybooks/getBookRecords");
+      const res = await axios.get("http://localhost:5000/api/books/getBookRecords");
       setHistoryBookData(res.data);
     } catch (error) {
       setHasError(error.message);
@@ -19,7 +19,7 @@ export default function HistoryBook() {
   };
 
   useEffect(()=>{
-    getMyHistoryData();
+    getMyBooksData();
   } , []);
 
   return (
@@ -31,9 +31,9 @@ export default function HistoryBook() {
       <div className="container">
         <div className="row">
           {
-            HistoryBooksData && HistoryBooksData.map((hisdetails) => (
-              <div key={hisdetails._id} className="col-sm-3" >
-                <History hisdetails={hisdetails} />
+            BooksData && BooksData.map((bookdetails) => (
+              <div key={bookdetails._id} className="col-sm-3" >
+                <History bookdetails={bookdetails} />
               </div>
             ))
           }

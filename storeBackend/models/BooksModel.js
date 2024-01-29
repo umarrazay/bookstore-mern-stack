@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const hisbookSchema = new mongoose.Schema({
+const booksSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -31,7 +31,7 @@ const hisbookSchema = new mongoose.Schema({
     required: true,
     min: 0
   },
-  imageUrl: {
+  image: {
     type: String,
     required: true,
     validate: {
@@ -47,9 +47,8 @@ const hisbookSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['History']
+    enum: ['History', 'Programming'] // Only allow 'History' and 'Programming'
   }
-},{Timestamp:true});
+}, {timestamps: true});
 
-module.exports = mongoose.model('HistoryBook', hisbookSchema);
-
+module.exports = mongoose.model('Book', booksSchema);
